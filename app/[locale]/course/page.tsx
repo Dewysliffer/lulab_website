@@ -18,39 +18,39 @@ const Course = () => {
   const buyButtonId = "buy_btn_1PuU6jJAR8bDRsEHJ75g29QJ";
   const publishableKey = "pk_live_51OdmsRJAR8bDRsEHIoskHYvVlHrxSILRwkvbEGaHJkg5PQcpb22j3lC2XdWptqbl28hNLtaBJQYozW4uy9xGGeo500aE45XnDP";
 
-  // useEffect(() => {
-  //   const fetchXiaoeGood = async () => {
-  //     try {
-  //       const response = await fetch("/api/xiaoe/good", { method: "GET" });
-  //       if (!response.ok) {
-  //         throw new Error("Failed to fetch Xiaoe good");
-  //       }
-  //       const data = await response.json();
-  //       setGoodsData(data.data[0]);
-  //     } catch (error) {
-  //       setError((error as Error).message || "Unknown error occurred");
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchXiaoeGood = async () => {
+      try {
+        const response = await fetch("/api/xiaoe/good", { method: "GET" });
+        if (!response.ok) {
+          throw new Error("Failed to fetch Xiaoe good");
+        }
+        const data = await response.json();
+        setGoodsData(data.data[0]);
+      } catch (error) {
+        setError((error as Error).message || "Unknown error occurred");
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  //   fetchXiaoeGood();
+    fetchXiaoeGood();
 
-  //   const loadStripeScript = () => {
-  //     const script = document.createElement("script");
-  //     script.src = "https://js.stripe.com/v3/buy-button.js";
-  //     script.async = true;
-  //     document.body.appendChild(script);
+    const loadStripeScript = () => {
+      const script = document.createElement("script");
+      script.src = "https://js.stripe.com/v3/buy-button.js";
+      script.async = true;
+      document.body.appendChild(script);
 
-  //     return () => {
-  //       document.body.removeChild(script);
-  //     };
-  //   };
+      return () => {
+        document.body.removeChild(script);
+      };
+    };
 
-  //   const stripeScriptCleanup = loadStripeScript();
+    const stripeScriptCleanup = loadStripeScript();
 
-  //   return stripeScriptCleanup;
-  // }, []);
+    return stripeScriptCleanup;
+  }, []);
 
   if (loading) {
     return (
