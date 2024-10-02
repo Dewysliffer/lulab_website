@@ -56,7 +56,7 @@ export default function AppNav() {
 
             {/* 移动端菜单切换按钮 */}
             <NavbarContent className="sm:hidden" justify="start">
-                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="focus:outline-none"/>
             </NavbarContent>
 
             {/* 左侧品牌 */}
