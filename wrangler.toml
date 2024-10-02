@@ -2,3 +2,13 @@ name = "lu-lab"
 compatibility_date = "2024-10-02"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+[env.production.vars]
+XIAOE_APP_ID="appp7SI9foD2454"
+XIAOE_CLIENT_ID="xopTLrQOK9O9175"
+XIAOE_TOKEN_URL="https://api.xiaoe-tech.com/token"
+XIAOE_SECRET_KEY="vbKx6QkVe4soNAdv7GLYegWwWa5aQPhp"
+XIAOE_GOOD_TYPE="21"
+XIAOE_GOOD_ID="g_665f2719e0bcd_mrMARvTL54"
+NEXT_PUBLIC_SUPABASE_URL="https://gcsvfppwvcphetrlqdco.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdjc3ZmcHB3dmNwaGV0cmxxZGNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUwODI0NjAsImV4cCI6MjAzMDY1ODQ2MH0.yH0m6a5XpR4_pUorpzQnrF6ABUaLzsS_rDFyQ6Y2n2Y"
