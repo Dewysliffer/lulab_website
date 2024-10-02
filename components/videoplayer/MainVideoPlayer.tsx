@@ -1,37 +1,48 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './MainVideoPlayer.module.css';
 
-const MainVideoPlayer = () => {
-    const videoRef = useRef<HTMLVideoElement | null>(null);
+interface MainVideoPlayerProps {
+    isMobile: boolean;
+}
+
+const MainVideoPlayer: React.FC<MainVideoPlayerProps> = ({ isMobile }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     const handleContextMenu = (event: React.MouseEvent<HTMLVideoElement>) => {
         event.preventDefault(); // 阻止右键菜单显示
     };
 
-     // 切换播放和暂停状态
-     const handleVideoClick = () => {
-        if (videoRef.current) {
-            if (videoRef.current.paused) {
-                videoRef.current.play(); // 播放视频
-            } else {
-                videoRef.current.pause(); // 暂停视频
+    useEffect(() => {
+        const video = videoRef.current;
+        const handleExitFullScreen = () => {
+            if (video) {
+                video.play(); // 退出全屏时继续播放
             }
+        };
+
+        if (video) {
+            video.addEventListener('webkitendfullscreen', handleExitFullScreen);
         }
-    };
+
+        return () => {
+            if (video) {
+                video.removeEventListener('webkitendfullscreen', handleExitFullScreen);
+            }
+        };
+    }, []);
 
     return (
         <div className={styles.videoContainer}>
             <video
                 ref={videoRef}
-                autoPlay
+                autoPlay={!isMobile}
                 muted
                 loop
                 controls
                 controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
                 className={styles.video}
-                // onClick={handleVideoClick} // 添加点击事件
                 onContextMenu={handleContextMenu}
-                disablePictureInPicture  
+                disablePictureInPicture
             >
                 <source
                     src="https://dpv.videocc.net/d309ba6b1c/4/d309ba6b1ca45781f605dca2431887b4_2.mp4?pid=1727313420263X1199484"

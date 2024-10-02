@@ -38,7 +38,7 @@ export default function About() {
           {/* Video */}
           <VideoContainer>
             {/* 使用在线视频（酷播云） */}
-            <MainVideoPlayer />
+            <MainVideoPlayer isMobile={isMobile}/> 
           </VideoContainer>
 
           <Container maxWidth="lg" className="py-12">
