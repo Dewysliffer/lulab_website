@@ -6,6 +6,7 @@ interface MainVideoPlayerProps {
 }
 const MainVideoPlayer: React.FC<MainVideoPlayerProps> = ({ isMobile }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const imageUrl = "/images/main_video_img.jpg";
     const videoUrl = "https://dpv.videocc.net/d309ba6b1c/4/d309ba6b1ca45781f605dca2431887b4_2.mp4?pid=1727313420263X1199484";
 
     const handleContextMenu = (event: React.MouseEvent<HTMLVideoElement>) => {
@@ -18,6 +19,7 @@ const MainVideoPlayer: React.FC<MainVideoPlayerProps> = ({ isMobile }) => {
                 <video
                     ref={videoRef}
                     preload="auto"
+                    poster={imageUrl}
                     playsInline
                     webkit-playsInline
                     x5-video-player-type="h5"

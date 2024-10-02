@@ -56,7 +56,7 @@ export default function AppNav() {
 
             {/* 移动端菜单切换按钮 */}
             <NavbarContent className="sm:hidden" justify="start">
-                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="focus:outline-none"/>
+                <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}/>
             </NavbarContent>
 
             {/* 左侧品牌 */}
@@ -105,7 +105,7 @@ export default function AppNav() {
             </NavbarContent>
 
             {/* 移动端菜单 */}
-            <NavbarMenu onClick={handleMenuItemClick}>
+            <NavbarMenu onClick={handleMenuItemClick} className="focus:outline-none">
                 {pMenuItems.map((item, index) => (
                     <NavbarMenuItem key={index} isActive={pathname === item.href} >
                         <Link

@@ -7,6 +7,7 @@ interface SortVideoPlayerProps {
 
 const SortVideoPlayer: React.FC<SortVideoPlayerProps> = ({ isMobile }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const imageUrl = "/images/sort_video_img.jpg";
     const videoUrl = "https://dpv.videocc.net/d309ba6b1c/0/d309ba6b1cda2ecfc8934ec686bf78d0_1.mp4?pid=1727242537389X1944690";
     const handleContextMenu = (event: React.MouseEvent<HTMLVideoElement>) => {
         event.preventDefault(); // 阻止右键菜单显示
@@ -20,6 +21,7 @@ const SortVideoPlayer: React.FC<SortVideoPlayerProps> = ({ isMobile }) => {
                     width="100%"
                     height="auto"
                     preload="auto"
+                    poster={imageUrl}
                     playsInline
                     webkit-playsInline
                     x5-video-player-type="h5"
