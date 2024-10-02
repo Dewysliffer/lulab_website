@@ -26,17 +26,17 @@ const SortVideoPlayer: React.FC<SortVideoPlayerProps> = ({ isMobile }) => {
     return (
         <div className={styles.videoContainer}>
             <video
-                width={isMobile ? "60%" : "260px"}
+                width={isMobile ? "100%" : "260px"}
                 ref={videoRef}
                 height="auto"
                 muted
-                autoPlay
-                loop
+                // autoPlay
+                // loop
                 preload="metadata"
                 controls
                 controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
                 className={styles.video}
-                onClick={handleVideoClick} // 添加点击事件
+                // onClick={handleVideoClick} // 添加点击事件
                 onContextMenu={handleContextMenu}
                 disablePictureInPicture
             >

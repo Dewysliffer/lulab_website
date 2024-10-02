@@ -29,7 +29,7 @@ const MainVideoPlayer = () => {
                 controls
                 controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
                 className={styles.video}
-                onClick={handleVideoClick} // 添加点击事件
+                // onClick={handleVideoClick} // 添加点击事件
                 onContextMenu={handleContextMenu}
                 disablePictureInPicture  
             >
