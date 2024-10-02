@@ -6,6 +6,7 @@ import Carousel from "react-material-ui-carousel";
 import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import styles from "./course.module.css";
+export const runtime = 'edge';
 
 const Course = () => {
   const [goodsData, setGoodsData] = useState<any>(null);

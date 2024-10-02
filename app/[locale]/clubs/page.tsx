@@ -11,6 +11,7 @@
 
 import React from 'react';
 // import Link from 'next/link';
+export const runtime = 'edge';
 
 interface Club {
     id: number;

@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import supabase from "../api/supabaseClient";
+export const runtime = 'edge';
 
 export default async function handler(
   req: NextApiRequest,

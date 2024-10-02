@@ -16,6 +16,7 @@ import { Box, useTheme, useMediaQuery, Typography, Card, CardContent } from '@mu
 import styles from './home.module.css'; // Import the CSS module
 import { styled } from '@mui/system';
 import { useTranslations } from 'next-intl';
+export const runtime = 'edge';
 
 const BackgroundContainer = styled('div')({
   width: '100%',

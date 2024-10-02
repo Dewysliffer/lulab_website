@@ -5,6 +5,7 @@ import { styled } from '@mui/system';
 import { useTranslations } from 'next-intl';
 import MainVideoPlayer from '@/components/videoplayer/MainVideoPlayer';
 import SortVideoPlayer from '@/components/sortvideoplayer/SortVideoPlayer';
+export const runtime = 'edge';
 
 const VideoContainer = styled('div')({
   width: '100%',

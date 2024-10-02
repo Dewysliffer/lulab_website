@@ -1,5 +1,7 @@
 import supabase from "../api/supabaseClient";
 import { NextApiRequest, NextApiResponse } from "next";
+export const runtime = 'edge';
+
 export default async function getKey(
   req: NextApiRequest,
   res: NextApiResponse

@@ -11,6 +11,7 @@
 
 
 import { goodsDetail } from "../../../../utils/xiaoe";
+export const runtime = 'edge';
 
 
 const XIAOE_GOOD_TYPE = process.env.XIAOE_GOOD_TYPE;

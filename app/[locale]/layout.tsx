@@ -15,6 +15,7 @@ import { getMessages } from 'next-intl/server';
 import AppNav from '../../components/navbar/navbar';
 import React from 'react';
 import "./globals.css";
+export const runtime = 'edge';
 
 
 
