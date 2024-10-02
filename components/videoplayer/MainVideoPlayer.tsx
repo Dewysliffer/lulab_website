@@ -33,23 +33,33 @@ const MainVideoPlayer: React.FC<MainVideoPlayerProps> = ({ isMobile }) => {
 
     return (
         <div className={styles.videoContainer}>
-            <video
-                ref={videoRef}
-                autoPlay={!isMobile}
-                muted
-                loop
-                controls
-                controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
-                className={styles.video}
-                onContextMenu={handleContextMenu}
-                disablePictureInPicture
-            >
-                <source
-                    src="https://dpv.videocc.net/d309ba6b1c/4/d309ba6b1ca45781f605dca2431887b4_2.mp4?pid=1727313420263X1199484"
-                    type="video/mp4"
-                />
-                Your browser does not support the video tag.
-            </video>
+            {isMobile ? (
+                <iframe
+                    src="http://go.plvideo.cn/front/video/preview?vid=d309ba6b1ca45781f605dca2431887b4_d"
+                    width="100%"
+                    height="auto"
+                    allow="fullscreen"
+                    allowFullScreen
+                ></iframe>
+            ) : (
+                <video
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    loop
+                    controls
+                    controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
+                    className={styles.video}
+                    onContextMenu={handleContextMenu}
+                    disablePictureInPicture
+                >
+                    <source
+                        src="https://dpv.videocc.net/d309ba6b1c/4/d309ba6b1ca45781f605dca2431887b4_2.mp4?pid=1727313420263X1199484"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            )}
         </div>
     );
 };
