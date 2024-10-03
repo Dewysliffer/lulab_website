@@ -34,6 +34,7 @@ export default function ButtonIntl() {
             isIconOnly
             aria-label="Like"
             onPress={handleChange}
+			style={{backgroundColor: 'white'}}
         >
             {params.locale === 'zh' ? <IconEn color="#306fe5" /> : <IconZh color="#306fe5" />}
         </Button>

@@ -92,7 +92,7 @@ export default function AppNav() {
                 {/* <NavbarItem className="hidden lg:flex">
                     <Link href="#">{t('login')}</Link>
                 </NavbarItem> */}
-                <NavbarItem className="hidden lg:flex">
+                <NavbarItem className="lg:flex">
                     <ButtonIntl />
                 </NavbarItem>
                 {/* <NavbarItem>
