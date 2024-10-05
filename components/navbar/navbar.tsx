@@ -93,7 +93,8 @@ export default function AppNav() {
                     <Link href="#">{t('login')}</Link>
                 </NavbarItem> */}
                 <NavbarItem className="lg:flex">
-                    <ButtonIntl />
+                    {/* 中英文互换按钮 */}
+                    {/* <ButtonIntl /> */}
                 </NavbarItem>
                 {/* <NavbarItem>
                     <Button as={Link} color="primary" href="/login" variant="flat">
